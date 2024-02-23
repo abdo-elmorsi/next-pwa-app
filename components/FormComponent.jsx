@@ -50,7 +50,7 @@ const FormComponent = () => {
                             placeholder='Enter name'
                             value={usersFormData.name}
                             onChange={handleUserChange}
-                            className="w-full p-2 text-gray-700 border rounded focus:outline-none"
+                            className="w-full p-2 text-gray-700 border rounded bg-gray-50 focus:outline-none"
                         />
                     </div>
                     <div className="mb-4">
@@ -60,11 +60,11 @@ const FormComponent = () => {
                             type='number'
                             value={usersFormData.age}
                             onChange={handleUserChange}
-                            className="w-full p-2 text-gray-700 border rounded focus:outline-none"
+                            className="w-full p-2 text-gray-700 border rounded bg-gray-50 focus:outline-none"
                         ></input>
                     </div>
                     <button onClick={handleSubmitUser} className="p-2 text-black bg-yellow-200 rounded bg-gold-500" >
-                        Submit
+                        Add
                     </button>
                 </form>
             </div>
@@ -78,7 +78,7 @@ const FormComponent = () => {
                             placeholder='Enter name'
                             value={productsFormData.name}
                             onChange={handleProductChange}
-                            className="w-full p-2 text-gray-700 border rounded focus:outline-none"
+                            className="w-full p-2 text-gray-700 border rounded bg-gray-50 focus:outline-none"
                         />
                     </div>
                     <div className="mb-4">
@@ -89,11 +89,11 @@ const FormComponent = () => {
                             placeholder='Enter details'
                             value={productsFormData.details}
                             onChange={handleProductChange}
-                            className="w-full p-2 text-gray-700 border rounded focus:outline-none"
+                            className="w-full p-2 text-gray-700 border rounded bg-gray-50 focus:outline-none"
                         ></textarea>
                     </div>
                     <button onClick={handleSubmitProduct} className="p-2 text-black bg-yellow-200 rounded bg-gold-500" >
-                        Submit
+                        Add
                     </button>
                 </form>
             </div>
