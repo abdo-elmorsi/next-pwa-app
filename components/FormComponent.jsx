@@ -63,7 +63,7 @@ const FormComponent = () => {
                             className="w-full p-2 text-gray-700 border rounded focus:outline-none"
                         ></input>
                     </div>
-                    <button onClick={handleSubmitUser} className="p-2 text-white bg-yellow-200 rounded bg-gold-500" >
+                    <button onClick={handleSubmitUser} className="p-2 text-black bg-yellow-200 rounded bg-gold-500" >
                         Submit
                     </button>
                 </form>
@@ -92,7 +92,7 @@ const FormComponent = () => {
                             className="w-full p-2 text-gray-700 border rounded focus:outline-none"
                         ></textarea>
                     </div>
-                    <button onClick={handleSubmitProduct} className="p-2 text-white bg-yellow-200 rounded bg-gold-500" >
+                    <button onClick={handleSubmitProduct} className="p-2 text-black bg-yellow-200 rounded bg-gold-500" >
                         Submit
                     </button>
                 </form>

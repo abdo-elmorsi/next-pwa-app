@@ -6,7 +6,7 @@ db.version(1).stores({
     products: '++id, name, details',
 });
 export const closeDB = () => {
-    console.log("closed");
+    return null;
     // db.close();
 }
 export default db;
