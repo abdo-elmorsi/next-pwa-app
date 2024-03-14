@@ -9,7 +9,7 @@ const DataListComponent = () => {
     const { Toast, showToast } = useToast();
     const users = useLiveQuery(async () => await db.users.toArray()) || [];
     const products = useLiveQuery(async () => await db.products.toArray()) || [];
-
+    console.log(users);
     const handleDeleteUser = async (id) => {
         try {
             await deleteUser(id);

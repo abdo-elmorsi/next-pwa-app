@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import '../styles/globals.css'
+import Layout from '../components/layout'
 
 function MyApp({ Component, pageProps }) {
 
@@ -8,7 +9,9 @@ function MyApp({ Component, pageProps }) {
       <title>NextJs PWA App</title>
 
     </Head>
-    <Component {...pageProps} />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
   </>
 }
 

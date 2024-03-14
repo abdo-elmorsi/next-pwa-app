@@ -1,8 +1,10 @@
 import db, { closeDB } from './db';
+import { hashPassword } from './utils/index.js';
 
-export const insertData = async (name, age) => {
+export const createUser = async (name, age, password) => {
     try {
-        await db.users.add({ name, age: Number(age) });
+        const hashedPass = hashPassword(password);
+        await db.users.add({ name, age: Number(age), password: hashedPass });
         closeDB()
         return null;
     } catch (error) {
@@ -10,7 +12,7 @@ export const insertData = async (name, age) => {
     }
 };
 
-export const getAllData = async () => {
+export const getAllUsers = async () => {
     try {
         const users = await db.users.toArray();
         closeDB()
@@ -20,7 +22,7 @@ export const getAllData = async () => {
     }
 };
 
-export const updateData = async (id, name, age) => {
+export const updateUser = async (id, name, age) => {
     try {
         await db.users.update(id, { name, age: Number(age) });
         closeDB()
@@ -30,7 +32,7 @@ export const updateData = async (id, name, age) => {
     }
 };
 
-export const deleteData = async (id) => {
+export const deleteUser = async (id) => {
     try {
         await db.users.delete(id);
         closeDB()
@@ -40,7 +42,7 @@ export const deleteData = async (id) => {
     }
 };
 
-export const getById = async (id) => {
+export const getUserById = async (id) => {
     try {
         const data = await db.users.get(id);
         closeDB()
@@ -49,3 +51,4 @@ export const getById = async (id) => {
         throw new Error(`Error getting data by id: ${error}`);
     }
 };
+

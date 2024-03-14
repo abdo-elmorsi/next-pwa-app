@@ -1,6 +1,6 @@
 import db, { closeDB } from './db';
 
-export const insertData = async (name, details) => {
+export const createProduct = async (name, details) => {
     try {
         await db.products.add({ name, details });
         closeDB()
@@ -10,7 +10,7 @@ export const insertData = async (name, details) => {
     }
 };
 
-export const getAllData = async () => {
+export const getAllProducts = async () => {
     try {
         const products = await db.products.toArray();
         closeDB()
@@ -20,7 +20,7 @@ export const getAllData = async () => {
     }
 };
 
-export const updateData = async (id, name, details) => {
+export const updateProduct = async (id, name, details) => {
     try {
         await db.products.update(id, { name, details });
         closeDB()
@@ -30,7 +30,7 @@ export const updateData = async (id, name, details) => {
     }
 };
 
-export const deleteData = async (id) => {
+export const deleteProduct = async (id) => {
     try {
         await db.products.delete(id);
         closeDB()
@@ -40,7 +40,7 @@ export const deleteData = async (id) => {
     }
 };
 
-export const getById = async (id) => {
+export const getProductById = async (id) => {
     try {
         const data = await db.products.get(id);
         closeDB()
