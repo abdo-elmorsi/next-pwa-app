@@ -15,7 +15,7 @@ const Toaster = ({ type, message, onClose }) => {
     };
 
     return (
-        <div className="absolute top-4 right-4">
+        <div className="absolute z-50 top-4 right-4">
             <div className={`max-w-xs ${getColorClass(type)} text-sm text-white rounded-md shadow-lg mb-3 ml-3`} role="alert">
                 <div className="flex p-4">
                     {message}
