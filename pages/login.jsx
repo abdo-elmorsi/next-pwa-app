@@ -45,7 +45,7 @@ const Login = () => {
             <form onSubmit={handleSubmit} className="p-5 border border-gray-100 shadow-md w-96">
                 <h2 className="pb-5 text-2xl font-semibold text-center text-white ">Login</h2>
                 <div className="flex flex-col gap-5 ">
-                    <Input name="userName" label="User Name" value={userInfo.useName} onChange={handleChange} />
+                    <Input name="userName" label="User Name." value={userInfo.useName} onChange={handleChange} />
                     <Input name="password" label="Password" type="password" value={userInfo.password} onChange={handleChange} />
 
                     <Button type="submit" disabled={!userInfo?.userName || !userInfo.password || submit} >
